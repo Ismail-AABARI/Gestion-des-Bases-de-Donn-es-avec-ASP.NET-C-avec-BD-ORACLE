@@ -1,6 +1,6 @@
 # Projet Oracle
 
-# Gestion des Bases de Données avec ASP.NET C# avec un SGBD ORACLE
+# Application Web de Gestion des Bases de Données avec ASP.NET C# avec un SGBD ORACLE
 Ce projet vise à gérer une base de données relationnelle en assurant la synchronisation des données entre une machine locale et une machine virtuelle. Les modifications (ajout, suppression, mise à jour) sont synchronisées en temps réel, avec une flexibilité permettant d'inverser les rôles de client et serveur.
 
 ### Réalisé par :
