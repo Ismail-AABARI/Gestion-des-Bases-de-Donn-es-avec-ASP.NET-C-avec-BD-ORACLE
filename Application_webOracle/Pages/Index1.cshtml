@@ -1,0 +1,49 @@
+﻿@page
+@using Application_webOracle.Models
+@inject Application_webOracle.Business.EmployeeService EmployeeService
+@model IndexModel
+
+<h1>Liste des Employés</h1>
+
+<a href="/CreateEmployee" class="btn btn-success mb-3">Ajouter un Employé</a> <!-- Bouton Ajouter -->
+
+@{
+    var employees = await EmployeeService.GetEmployeesAsync();
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>EmpNo</th>
+            <th>EName</th>
+            <th>Job</th>
+            <th>HireDate</th>
+            <th>Sal</th>
+            <th>COMM</th>
+            <th>DeptNo</th>
+            <th>Actions</th> <!-- Colonne pour les actions -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in employees)
+        {
+            <tr>
+                <td>@emp.EmpNo</td>
+                <td>@emp.EName</td>
+                <td>@emp.Job</td>
+                <td>@emp.HireDate.ToShortDateString()</td>
+                <td>@emp.Sal</td>
+                <td>@emp.Comm</td>
+                <td>@emp.DeptNo</td>
+                <td>
+                    <!-- Bouton Modifier -->
+                    <a href="/EditEmployee/@emp.EmpNo" class="btn btn-primary">Modifier</a>
+
+                    <a href="/DeleteEmployee/@emp.EmpNo" class="btn btn-danger">Supprimer</a>
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

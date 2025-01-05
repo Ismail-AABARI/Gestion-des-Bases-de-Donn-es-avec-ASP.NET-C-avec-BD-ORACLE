@@ -1,0 +1,37 @@
+﻿@page
+@using Application_webOracle.Models
+@inject Application_webOracle.Business.DepartmentService DepartmentService
+@model IndexDeptModel
+
+<h1>Liste des Départements</h1>
+
+<a href="/CreateDepartment" class="btn btn-success mb-3">Ajouter un Département</a>
+
+@{
+    var departments = await DepartmentService.GetDepartmentsAsync();
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>DeptNo</th>
+            <th>Nom du Département</th>
+            <th>Lieu</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dept in departments)
+        {
+            <tr>
+                <td>@dept.DeptNo</td>
+                <td>@dept.DName</td>
+                <td>@dept.Loc</td>
+                <td>
+                    <a href="/EditDepartment/@dept.DeptNo" class="btn btn-primary">Modifier</a>
+                    <a href="/DeleteDepartment/@dept.DeptNo" class="btn btn-danger">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

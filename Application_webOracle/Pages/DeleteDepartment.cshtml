@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@using Application_webOracle.Models
+@using Application_webOracle.Business
+@inject DepartmentService DepartmentService
+@model DeleteDepartmentModel
+
+<h1>Supprimer le Département</h1>
+
+@if (Model.Department != null)
+{
+    <div>
+        <p><strong>DeptNo:</strong> @Model.Department.DeptNo</p>
+        <p><strong>Nom du Département:</strong> @Model.Department.DName</p>
+        <p><strong>Lieu:</strong> @Model.Department.Loc</p>
+    </div>
+
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Supprimer ce département</button>
+    </form>
+}
+else
+{
+    <p>Département non trouvé.</p>
+}

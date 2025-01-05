@@ -1,0 +1,78 @@
+﻿@page
+@model Application_webOracle.Pages.FormationOracleModel
+@{
+    Layout = "~/Pages/Shared/_LoginLayout.cshtml";
+}
+<div class="text-center">
+    <h1>Formation Oracle</h1>
+</div>
+
+<div class="container">
+    <section>
+        <h2>Introduction</h2>
+        <p>
+			Nous avons eu l'opportunité de participer à une formation approfondie sur l'administration des bases de données Oracle, dispensée par <strong>notre professeur de grande qualité</strong> . Cette formation a non seulement enrichi nos compétences techniques, mais elle a également renforcé notre capacité à gérer des bases de données complexes dans des environnements professionnels.
+        </p>
+        <p>
+			<strong>Nous souhaitons exprimer notre sincère gratitude à notre professeur pour son engagement, son expertise et sa pédagogie exceptionnelle. Grâce à ses explications claires et son soutien constant, nous avons pu assimiler des concepts avancés tout en acquérant une véritable maîtrise pratique. Cette formation a été d'une très grande qualité, et nous sommes profondément reconnaissants pour cette expérience enrichissante.</strong>
+        </p>
+    </section>
+
+    <section>
+        <h2>1. Gestion des instances Oracle</h2>
+        <p>
+            - Compréhension des étapes de démarrage d’une base de données : <strong>Shutdown → Nomount → Mount → Open</strong>.<br />
+            - Différences entre les fichiers <strong>Pfile</strong> (modifiable manuellement) et <strong>SPfile</strong> (modifiable dynamiquement).<br />
+            - Techniques pour créer et démarrer des bases de données à partir de fichiers de paramètres, avec un focus sur la création et l’utilisation des fichiers SPfile.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Journalisation et Redolog Files</h2>
+        <p>
+            - Rôle des fichiers <strong>Redolog</strong> dans la journalisation des transactions et dans la gestion des événements tels que <strong>Commit</strong>, saturation des buffers, ou le passage entre les groupes (<strong>LogSwitch</strong>).<br />
+            - Création, modification et suppression de groupes et de membres dans les fichiers Redolog.<br />
+            - Activation et gestion des modes <strong>ARCHIVE</strong> et <strong>NOARCHIVE LOG</strong>, permettant la sauvegarde ou l'écrasement des modifications avant synchronisation.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Gestion des tablespaces et des fichiers de données</h2>
+        <p>
+            - Connaissance des <strong>tablespaces</strong> (System, Sysaux et non-systèmes) pour structurer les données logiques.<br />
+            - Création de tablespaces avec des tailles fixes et extensibles, gestion locale des segments avec des bitmaps.<br />
+            - Techniques pour déplacer les fichiers de données (<strong>Datafiles</strong>) associés à des tablespaces, en les réassignant à de nouveaux emplacements physiques tout en maintenant l’intégrité de la base.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Pratiques DBA (Database Administrator)</h2>
+        <p>
+            - Capacité à gérer les utilisateurs DBA et finaux avec des permissions adaptées selon l'état de la base (<strong>Nomount</strong>, <strong>Mount</strong>, <strong>Open</strong>).<br />
+            - Réalisation d'opérations DBA telles que la mise hors ligne (<strong>Offline</strong>) et en ligne (<strong>Online</strong>) des tablespaces, ainsi que leur redimensionnement ou leur archivage manuel.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Journalisation manuelle et synchronisation</h2>
+        <p>
+            - Utilisation de commandes pour forcer des basculements (<strong>LogSwitch</strong>) et des points de contrôle (<strong>Checkpoint</strong>).<br />
+            - Mise en place et vérification de l’archivage manuel dans des dossiers spécifiques, garantissant la sécurité des transactions.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Exercices pratiques</h2>
+        <p>
+            - Mise en œuvre des commandes SQL pour créer, modifier et gérer les composants de la base, tels que les groupes de journaux, les tablespaces et les segments.<br />
+            - Développement d’une maîtrise des vues système comme <strong>V$log</strong>, <strong>V$logfile</strong>, et <strong>DBA_tablespaces</strong> pour consulter les métadonnées.
+        </p>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>
+            Cette formation a renforcé notre compréhension globale de l'administration des bases de données Oracle, tout en nous dotant d'outils concrets pour gérer des scénarios complexes dans des environnements réels. Nous renouvelons nos remerciements les plus sincères à notre professeur pour la qualité exceptionnelle de cette formation, qui restera pour nous une étape précieuse dans notre parcours professionnel.
+        </p>
+    </section>
+</div>

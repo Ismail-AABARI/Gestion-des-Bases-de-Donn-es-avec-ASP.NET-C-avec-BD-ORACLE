@@ -1,0 +1,52 @@
+﻿@page "{id:int}"
+@model EditEmployeeModel
+@using Application_webOracle.Models
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
+<h1>Modifier un Employé</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="EmpNo">EmpNo</label>
+        <input type="number" class="form-control" id="EmpNo" name="EmpNo" value="@Model.Employee.EmpNo" required />
+    </div>
+
+    <div class="form-group">
+        <label for="EName">Nom</label>
+        <input type="text" class="form-control" id="EName" name="EName" value="@Model.Employee.EName" required />
+    </div>
+    <div class="form-group">
+        <label for="Job">Poste</label>
+        <input type="text" class="form-control" id="Job" name="Job" value="@Model.Employee.Job" required />
+    </div>
+
+    <div class="form-group">
+        <label for="MGR">MGR</label>
+        <input type="number" class="form-control" id="MGR" name="MGR" value="@Model.Employee.Mgr" required />
+    </div>
+
+    <div class="form-group">
+        <label for="HireDate">Date d'Embauche</label>
+        <input type="date" class="form-control" id="HireDate" name="HireDate" value="@Model.Employee.HireDate" required />
+    </div>
+    <div class="form-group">
+        <label for="Sal">Salaire</label>
+        <input type="number" class="form-control" id="Sal" name="Sal" value="@Model.Employee.Sal"  step="0.01" />
+    </div>
+
+    <div class="form-group">
+        <label for="Comm">Comm</label>
+        <input type="number" class="form-control" id="Comm" name="Comm" value="@Model.Employee.Comm"  step="0.01" />
+    </div>
+
+    <div class="form-group">
+        <label for="DeptNo">DeptNo</label>
+        <input type="number" class="form-control" id="DeptNo" name="DeptNo" value="@Model.Employee.DeptNo"  step="0.01" />
+    </div>
+    <button type="submit" class="btn btn-primary">Modifier</button>
+</form>

@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model EditDepartmentModel
+@using Application_webOracle.Models
+
+<h1>Modifier un Département</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="DeptNo">DeptNo</label>
+        <input type="number" class="form-control" id="DeptNo" name="DeptNo" value="@Model.Department.DeptNo" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Dname">Nom du Département</label>
+        <input type="text" class="form-control" id="Dname" name="Dname" value="@Model.Department.DName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="LOC">Lieu</label>
+        <input type="text" class="form-control" id="LOC" name="LOC" value="@Model.Department.Loc" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Modifier</button>
+</form>
